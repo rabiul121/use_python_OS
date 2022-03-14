@@ -12,4 +12,4 @@ def validate_user(username, minlen):
 # print(validate_user("rabiul", 1))
 # print(validate_user(88, 1)) # raise error because integer has no len function
 # print(validate_user([], 1))
-print(validate_user(["name"], 1)) # will raise error
+# print(validate_user(["name"], 1)) # will raise error

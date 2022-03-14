@@ -1,6 +1,7 @@
 from tkinter.filedialog import test
 from rearrange import rearrange_name
 import unittest
+from validations import validate_user
 
 class TestRearrange(unittest.TestCase):
     def test_basic(self):
@@ -22,5 +23,8 @@ class TestRearrange(unittest.TestCase):
         testcase = "Volraire"
         expected = "Volraire"
         self.assertEqual(rearrange_name(testcase), expected)
+
+    def test_invalid_minlen(self):
+        self.assertRaises(ValueError, validate_user, "user", -1)
 
 unittest.main()
